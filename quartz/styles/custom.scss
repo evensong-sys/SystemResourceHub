@@ -1,0 +1,411 @@
+@use "./base.scss";
+
+/// =========================
+/// GLOBAL SAFE DEFAULTS
+/// =========================
+
+img {
+max-width: 100%;
+height: auto;
+}
+
+/// ---------- INLINE ICONS ----------
+
+.inline-icon {
+display: inline-block;
+vertical-align: -2px;
+margin-right: 6px;
+width: 16px;
+height: 16px;
+object-fit: contain;
+}
+
+/// =========================
+/// SIDEBAR / HEADER
+/// =========================
+
+.sidebar-header {
+display: flex;
+align-items: center;
+gap: 0.6rem;
+}
+
+.sidebar-logo img {
+width: 36px;
+height: 36px;
+object-fit: contain;
+}
+
+.sidebar-title h1 {
+font-size: 1.1rem;
+margin: 0;
+}
+
+/// =========================
+/// TOOL PAGE (INDIVIDUAL)
+/// =========================
+
+.tool-header {
+display: flex;
+gap: 16px;
+align-items: flex-start;
+margin-bottom: 18px;
+}
+
+.tool-header img {
+width: 56px;
+height: 56px;
+border-radius: 10px;
+object-fit: cover;
+}
+
+.tool-desc {
+margin: 4px 0 10px;
+font-size: 0.95rem;
+color: var(--darkgray);
+max-width: 600px;
+}
+
+/// ---------- TOOL PREVIEW ----------
+
+.tool-preview {
+max-width: 280px;
+width: 100%;
+margin: 0 auto;
+display: block;
+
+padding: 12px;
+background: #111;
+border-radius: 16px;
+}
+
+/// ---------- META ----------
+
+.tool-meta {
+display: grid;
+grid-template-columns: repeat(2, minmax(180px, 1fr));
+gap: 6px 20px;
+margin-bottom: 24px;
+}
+
+.meta-pair {
+display: grid;
+grid-template-columns: auto 1fr;
+gap: 6px;
+font-size: 0.9rem;
+}
+
+.meta-label {
+font-weight: 600;
+color: var(--secondary);
+}
+
+.meta-value {
+color: var(--darkgray);
+}
+
+/// ---------- CONTENT ----------
+
+.tool-container {
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
+.tool-section {
+margin-top: 24px;
+}
+
+.tool-section h2 {
+font-size: 1.1rem;
+color: var(--secondary);
+}
+
+/// ---------- FEATURES ----------
+
+.feature-section details {
+border-bottom: 1px solid var(--gray);
+padding: 8px 0;
+}
+
+.feature-section summary {
+display: flex;
+justify-content: space-between;
+cursor: pointer;
+font-weight: 600;
+}
+
+.feature-section summary::after {
+content: "▸";
+transition: transform 0.2s ease;
+}
+
+.feature-section details[open] summary::after {
+transform: rotate(90deg);
+}
+
+.detail-content {
+padding-left: 12px;
+font-size: 0.9em;
+color: var(--darkgray);
+}
+
+/// ---------- RIGHT SIDEBAR ----------
+
+.tool-sidebar {
+position: sticky;
+top: 80px;
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
+.tool-links {
+display: flex;
+gap: 12px;
+flex-wrap: wrap;
+align-items: center;
+}
+
+.tool-links a {
+  font-size: 1.2rem;
+  margin-right: 10px;
+  color: var(--secondary);
+  transition: 0.2s ease;
+}
+
+.tool-links a:hover {
+  color: var(--tertiary);
+  transform: translateY(-1px);
+}
+/// =========================
+/// TOOLS INDEX PAGE
+/// =========================
+
+body[data-slug="tools/index"] main {
+  max-width: 1100px;
+}
+
+body[data-slug="tools/index"] .page-listing {
+  display: none;
+}
+
+/// ---------- SEARCH ----------
+
+body[data-slug="tools/index"] .tool-search {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 10px;
+  border: 1px solid rgba(120,120,160,0.25);
+}
+
+/// ---------- FILTERS ----------
+
+body[data-slug="tools/index"] .tool-filters {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+body[data-slug="tools/index"] .tool-filters button {
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(120,120,160,0.25);
+  background: #f3f3ff;
+  cursor: pointer;
+}
+
+/// ---------- HIDDEN STATE (FIXED, DO NOT BREAK AGAIN ) ----------
+
+body[data-slug="tools/index"] .tool-card.hidden {
+  display: none;
+}
+
+/// ---------- GRID ----------
+
+body[data-slug="tools/index"] .tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.2rem;
+}
+
+/// ---------- CARD ----------
+
+body[data-slug="tools/index"] .tool-card {
+  display: block;
+  padding: 1rem;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #ffffff, #f3f2ff);
+  border: 1px solid rgba(140,140,180,0.25);
+  text-decoration: none;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+body[data-slug="tools/index"] .tool-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+/// ---------- CARD HEADER ----------
+
+body[data-slug="tools/index"] .tool-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+body[data-slug="tools/index"] .tool-card-header img {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
+body[data-slug="tools/index"] .tool-card h3 {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+body[data-slug="tools/index"] .tool-card p {
+  font-size: 0.82rem;
+  color: #444;
+}
+
+/// =========================
+/// HOMEPAGE
+/// =========================
+
+.recent-tools {
+margin-top: 2rem;
+}
+
+.recent-tools .tool-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+gap: 1rem;
+}
+
+/// ---------- CARD ----------
+
+.recent-tools .tool-card {
+display: flex;
+align-items: center;
+gap: 1rem;
+padding: 1rem;
+border-radius: 16px;
+background: var(--light);
+text-decoration: none;
+}
+
+.recent-tools .tool-card img {
+width: 40px;
+height: 40px;
+object-fit: contain;
+}
+
+.recent-tools .tool-card p {
+display: -webkit-box;
+-webkit-line-clamp: 5;
+-webkit-box-orient: vertical;
+overflow: hidden;
+text-overflow: ellipsis;
+max-height: calc(1.2em * 5);
+}
+
+/// ---------- HOVER ----------
+
+.tool-card:hover {
+transform: translateY(-2px);
+box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/// =========================
+/// GLOBAL TEXT
+/// =========================
+
+p {
+line-height: 1.6;
+margin-bottom: 1rem;
+}
+
+h2 {
+margin-top: 2.5rem;
+}
+
+/// =========================
+/// TABLES (FIXED)
+/// =========================
+
+.sp-table-wrap {
+overflow-x: auto;
+}
+
+.sp-table {
+width: 100%;
+min-width: 600px;
+border-collapse: collapse;
+}
+
+.sp-table th,
+.sp-table td {
+padding: 0.5rem;
+border-bottom: 1px solid var(--border);
+vertical-align: middle;
+}
+
+/// ---------- APP CELL ----------
+
+.app-cell {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.app-cell img {
+width: 40px;
+height: 40px;
+object-fit: contain;
+}
+
+.app-text {
+display: flex;
+flex-direction: column;
+line-height: 1.2;
+}
+
+.app-sub {
+font-size: 0.8rem;
+color: var(--darkgray);
+}
+
+/// =========================
+/// EMBEDS
+/// =========================
+
+.tally-wrapper iframe {
+width: 100%;
+min-height: 900px;
+border: none;
+display: block;
+}
+
+
+/// =========================
+/// FONTAWESOME ICONS
+/// =========================
+
+.inline-icon {
+  margin-right: 6px;
+  width: 1.2em;
+  text-align: center;
+  color: var(--secondary);
+}
+
+/// =========================
+/// ABOUT PAGE
+/// =========================
+
+body[data-slug="about/index"] .page-listing {
+  display: none !important;
+}
