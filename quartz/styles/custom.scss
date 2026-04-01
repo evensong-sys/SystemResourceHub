@@ -215,6 +215,13 @@ body[data-slug="tools/index"] .tool-filters button {
   cursor: pointer;
 }
 
+/* ✅ ADDED: ACTIVE FILTER STATE */
+body[data-slug="tools/index"] .tool-filters button.active {
+  background: var(--secondary);
+  color: white;
+  border-color: var(--secondary);
+}
+
 /// ---------- HIDDEN STATE (FIXED, DO NOT BREAK AGAIN ) ----------
 
 body[data-slug="tools/index"] .tool-card.hidden {

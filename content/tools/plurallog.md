@@ -17,8 +17,8 @@ license:
   name: Proprietary
   url:
 type:
+  - Front Tracking
   - Journaling
-  - Tracking
 platform:
   - Android
 status: Stable
@@ -33,7 +33,7 @@ tags:
   - energy-low
   - platform/mobile
   - type/journaling
-  - type/tracking
+  - type/front-tracking
 ---
 
 <div class="tool-header">  
