@@ -1,6 +1,6 @@
 ---
 created: 2026/03/27
-modified: 2026/03/27
+modified: 2026/04/01
 title: Ourcana
 logo: https://file.garden/ablfJEO_5VmXicbZ/SRH%20assets/ourcana.png
 seoTitle: Ourcana - Plural System Profiles & Member Tracking | System Resource Hub
@@ -9,6 +9,7 @@ description: Ourcana is a system management and profile tool that allows plural 
 seoDescription: Overview of Ourcana, including features, use cases, and how systems can use it for profiles and tracking.
 ogDescription: What Ourcana does, how it works, and how systems use it to manage members and share profiles.
 ogImage:
+contentType:
 developer:
   name: Boring Crew
   url: https://ourcana.space/
@@ -81,19 +82,19 @@ A system management tool focused on member profiles, fronting, and optionally sh
 
 <div class="feature-section">
 
-<details>
+<details open>  
 <summary>Privacy</summary>
 <div class="detail-content">
 Currently local only (data saved in browser cache for web or directly on device for android/iOS)
 </div>
 </details>
 
-<details>
+<details open>  
 <summary>AI-assisted Development</summary>
 <div class="detail-content">None</div>
 </details>
 
-<details>
+<details open>  
 <summary>Account Required</summary>
 <div class="detail-content">No</div>
 </details>
@@ -107,32 +108,32 @@ Currently local only (data saved in browser cache for web or directly on device 
 
 <div class="feature-section">
 
-<details>
+<details open>  
 <summary>Communication</summary>
 <div class="detail-content">None</div>
 </details>
 
-<details>
+<details open>  
 <summary>Tracking</summary>
 <div class="detail-content">Member profiles, front tracking, system organization</div>
 </details>
 
-<details>
+<details open>  
 <summary>Social</summary>
 <div class="detail-content">None</div>
 </details>
 
-<details>
+<details open>  
 <summary>Planning</summary>
 <div class="detail-content">None</div>
 </details>
 
-<details>
+<details open>  
 <summary>Integrations</summary>
 <div class="detail-content">Can import data from Simply Plural and/or PluralKit</div>
 </details>
 
-<details>
+<details open>  
 <summary>Accessibility</summary>
 <div class="detail-content">Unknown</div>
 </details>

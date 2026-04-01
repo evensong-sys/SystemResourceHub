@@ -1,6 +1,6 @@
 ---
 created: 2026/03/26
-modified: 2026/03/26
+modified: 2026/04/01
 title: Lighthouse
 logo: https://file.garden/ablfJEO_5VmXicbZ/SRH%20assets/lighthouse.png
 seoTitle: Lighthouse - Internal Communication App for Plural Systems | System Resource Hub
@@ -9,13 +9,15 @@ description: Lighthouse is an internal communication app designed for plural sys
 seoDescription: Overview of Lighthouse, including features, use cases, and how systems can use it for internal communication.
 ogDescription: What Lighthouse does, how it works, and how systems use it to communicate internally.
 ogImage:
+contentType:
 developer:
   name: Lighthouse Team
   url: https://www.writelighthouse.com/
 license:
   name: Unknown
   url:
-type: Communication
+type:
+  - Journaling
 platform: Web
 status: Stable
 cost: Free
@@ -78,19 +80,19 @@ An internal messaging tool for systems to leave notes, communicate, and stay con
 
 <div class="feature-section">
 
-<details>
+<details open>  
 <summary>Privacy</summary>
 <div class="detail-content">
 Cloud-based; messages stored within the app
 </div>
 </details>
 
-<details>
+<details open>  
 <summary>AI-assisted Development</summary>
 <div class="detail-content">None</div>
 </details>
 
-<details>
+<details open>  
 <summary>Account Required</summary>
 <div class="detail-content">Yes</div>
 </details>
@@ -104,32 +106,32 @@ Cloud-based; messages stored within the app
 
 <div class="feature-section">
 
-<details>
+<details open>  
 <summary>Communication</summary>
 <div class="detail-content">Internal messaging between system members</div>
 </details>
 
-<details>
+<details open>  
 <summary>Tracking</summary>
 <div class="detail-content">Light (message history, not full front tracking)</div>
 </details>
 
-<details>
+<details open>  
 <summary>Social</summary>
 <div class="detail-content">None</div>
 </details>
 
-<details>
+<details open>  
 <summary>Planning</summary>
 <div class="detail-content">None</div>
 </details>
 
-<details>
+<details open>  
 <summary>Integrations</summary>
 <div class="detail-content">None</div>
 </details>
 
-<details>
+<details open>  
 <summary>Accessibility</summary>
 <div class="detail-content">Simple interface; low barrier to entry</div>
 </details>

@@ -1,6 +1,6 @@
 ---
 created: 2026/03/23
-modified: 2026/03/31
+modified: 2026/04/01
 title: PluralSync
 logo: https://file.garden/ablfJEO_5VmXicbZ/SRH%20assets/pluralsync.png
 seoTitle: PluralSync - Fronting tool for Pliural Systems | System Resource Hub
@@ -78,26 +78,21 @@ Keeps your system’s fronting status in sync across apps like SimplyPlural, Plu
 
 <div class="feature-section">
 
-<details>
+<details open>  
 <summary>Privacy</summary>
 <div class="detail-content">
 Cloud-based; data shared between connected platforms
 </div>
 </details>
 
-<details>
+<details open>  
 <summary>AI-assisted Development</summary>
 <div class="detail-content">Yes</div>
 </details>
 
-<details>
+<details open>  
 <summary>Account Required</summary>
 <div class="detail-content">Yes</div>
-</details>
-
-<details>
-<summary>Stability</summary>
-<div class="detail-content">Early</div>
 </details>
 
 </div>
@@ -110,38 +105,38 @@ Cloud-based; data shared between connected platforms
 
 <div class="feature-section">
 
-<details>
+<details open>  
 <summary>Communication</summary>
 <div class="detail-content">None</div>
 </details>
 
-<details>
+<details open>  
 <summary>Tracking</summary>
 <div class="detail-content">
 Real-time front status syncing across platforms
 </div>
 </details>
 
-<details>
+<details open>  
 <summary>Social</summary>
 <div class="detail-content">
 Indirect (updates connected social platforms)
 </div>
 </details>
 
-<details>
+<details open>  
 <summary>Planning</summary>
 <div class="detail-content">None</div>
 </details>
 
-<details>
+<details open>  
 <summary>Integrations</summary>
 <div class="detail-content">
 SimplyPlural, Discord, VRChat, PluralKit
 </div>
 </details>
 
-<details>
+<details open>  
 <summary>Accessibility</summary>
 <div class="detail-content">Unknown</div>
 </details>

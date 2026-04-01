@@ -1,6 +1,6 @@
 ---
-created: 2026-03-31
-modified: 2026/03/31
+created: 2026/03/31
+modified: 2026/04/01
 title: Antar
 logo: https://file.garden/ablfJEO_5VmXicbZ/SRH%20assets/antar.png
 seoTitle: Antar - Internal Chat App for Plural Systems & Self Dialogue | System Resource Hub
@@ -16,8 +16,11 @@ developer:
 license:
   name: Proprietary
   url:
-type: Communication
-platform: Android, iOS
+type:
+  - Journaling
+platform:
+  - Android
+  - iOS
 status: Active
 cost: free
 links:
@@ -71,19 +74,19 @@ An internal chat app for self-dialogue, often used by systems to communicate bet
 
 <div class="feature-section">
 
-<details>
+<details open>  
 <summary>Privacy</summary>
 <div class="detail-content">
 Local-first; conversations stored on device unless synced/backed up
 </div>
 </details>
 
-<details>
+<details open>  
 <summary>AI-assisted Development</summary>
 <div class="detail-content">None</div>
 </details>
 
-<details>
+<details open>  
 <summary>Account Required</summary>
 <div class="detail-content">No</div>
 </details>
@@ -97,32 +100,32 @@ Local-first; conversations stored on device unless synced/backed up
 
 <div class="feature-section">
 
-<details>
+<details open>  
 <summary>Communication</summary>
 <div class="detail-content">Chat-style internal conversations between parts/headmates</div>
 </details>
 
-<details>
+<details open>  
 <summary>Tracking</summary>
 <div class="detail-content">Message history; not designed for front tracking</div>
 </details>
 
-<details>
+<details open>  
 <summary>Social</summary>
 <div class="detail-content">None</div>
 </details>
 
-<details>
+<details open>  
 <summary>Planning</summary>
 <div class="detail-content">Yes (notes, reminders, ongoing conversations)</div>
 </details>
 
-<details>
+<details open>  
 <summary>Integrations</summary>
 <div class="detail-content">None</div>
 </details>
 
-<details>
+<details open>  
 <summary>Accessibility</summary>
 <div class="detail-content">Very easy to use; familiar chat interface</div>
 </details>

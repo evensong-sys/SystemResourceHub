@@ -1,6 +1,6 @@
 ---
 created: 2026/03/26
-modified: 2026/03/26
+modified: 2026/04/01
 title: PluralKit
 logo: https://file.garden/ablfJEO_5VmXicbZ/SRH%20assets/pluralkit.png
 seoTitle: PluralKit - Discord Proxy System for Plural Systems | System Resource Hub
@@ -9,6 +9,7 @@ description: PluralKit is a Discord bot that allows plural systems to proxy mess
 seoDescription: Overview of PluralKit, including features, use cases, and how systems use it on Discord.
 ogDescription: What PluralKit does, how it works, and how systems use it to manage fronting and communication.
 ogImage:
+contentType:
 developer:
   name: PluralKit Team
   url: https://github.com/PluralKit
@@ -79,19 +80,19 @@ A Discord bot that lets systems proxy messages, track fronting, and manage membe
   
 <div class="feature-section">  
   
-<details>  
+<details open>  
 <summary>Privacy</summary>  
 <div class="detail-content">  
 Data stored via bot; visible in Discord where used  
 </div>  
 </details>  
   
-<details>  
+<details open>  
 <summary>AI-assisted Development</summary>  
 <div class="detail-content">No</div>  
 </details>  
   
-<details>  
+<details open>  
 <summary>Account Required</summary>  
 <div class="detail-content">  
 Discord account required  
@@ -105,40 +106,41 @@ Discord account required
   
 <h3>Features</h3>  
 <div class="feature-section">  
-<details>  
+
+<details open>  
 <summary>Communication</summary>  
 <div class="detail-content">  
 Message proxying (send messages as system members)  
 </div>  
 </details>  
   
-<details>  
+<details open>  
 <summary>Tracking</summary>  
 <div class="detail-content">  
 Front tracking, member management, system info  
 </div>  
 </details>  
   
-<details>  
+<details open>  
 <summary>Social</summary>  
 <div class="detail-content">  
 Direct (built for Discord interaction)  
 </div>  
 </details>  
   
-<details>  
+<details open>  
 <summary>Planning</summary>  
 <div class="detail-content">None</div>  
 </details>  
   
-<details>  
+<details open>  
 <summary>Integrations</summary>  
 <div class="detail-content">  
 Discord (native), works alongside tools like SimplyPlural  
 </div>  
 </details>  
   
-<details>  
+<details open>  
 <summary>Accessibility</summary>  
 <div class="detail-content">  
 Command-based; may have learning curve  

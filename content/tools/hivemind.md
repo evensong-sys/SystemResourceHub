@@ -1,6 +1,6 @@
 ---
 created: 2026/03/26
-modified: 2026/03/31
+modified: 2026/04/01
 title: Hivemind
 logo: https://file.garden/ablfJEO_5VmXicbZ/SRH%20assets/hivemind.png
 seoTitle: Hivemind - Plural System Manager & Front Tracking Tool | System Resource Hub
@@ -80,19 +80,19 @@ A system management tool for tracking members, fronting, and internal system act
   
 <div class="feature-section">  
   
-<details>  
+<details open>  
 <summary>Privacy</summary>  
 <div class="detail-content">  
 Currently offline only, data stored locally.
 </div>  
 </details>  
   
-<details>  
+<details open>  
 <summary>AI-assisted Development</summary>  
 <div class="detail-content">No</div>  
 </details>  
   
-<details>  
+<details open>  
 <summary>Account Required</summary>  
 <div class="detail-content">No</div>  
 </details>  
@@ -106,40 +106,40 @@ Currently offline only, data stored locally.
   
 <div class="feature-section">  
   
-<details>  
+<details open>  
 <summary>Communication</summary>  
 <div class="detail-content">None currently</div>  
 </details>  
   
-<details>  
+<details open>  
 <summary>Tracking</summary>  
 <div class="detail-content">  
 Member tracking, front tracking, system organization  
 </div>  
 </details>  
   
-<details>  
+<details open>  
 <summary>Social</summary>  
 <div class="detail-content">  
 None (not inherently social)  
 </div>  
 </details>  
   
-<details>  
+<details open>  
 <summary>Planning</summary>  
 <div class="detail-content">  
 Possible (logging and internal organization)  
 </div>  
 </details>  
   
-<details>  
+<details open>  
 <summary>Integrations</summary>  
 <div class="detail-content">  
 Can import from Simply Plural, PluralKit, Tupperbox, and Octocon.
 </div>  
 </details>  
   
-<details>  
+<details open>  
 <summary>Accessibility</summary>  
 <div class="detail-content">  
 Unknown  

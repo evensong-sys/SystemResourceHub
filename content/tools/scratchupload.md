@@ -1,6 +1,6 @@
 ---
 created: 2026/03/31
-modified: 2026/03/31
+modified: 2026/04/01
 title: ScratchUpload
 logo: https://file.garden/ablfJEO_5VmXicbZ/SRH%20assets/scratchfront.jpg
 seoTitle: ScratchUpload - Simple Image Hosting for Plural Systems | System Resource Hub
@@ -44,25 +44,20 @@ tags:
 
 <div class="feature-section">
 
-<details>
+<details open>  
 <summary>Privacy</summary>
 <div class="detail-content">
 Add privacy notes here
 </div>
 </details>
 
-<details>
+<details open>  
 <summary>AI-assisted Development</summary>
 <div class="detail-content">Unknown</div>
 </details>
 
-<details>
+<details open>  
 <summary>Account Required</summary>
-<div class="detail-content">Unknown</div>
-</details>
-
-<details>
-<summary>Stability</summary>
 <div class="detail-content">Unknown</div>
 </details>
 
@@ -75,32 +70,32 @@ Add privacy notes here
 
 <div class="feature-section">
 
-<details>
+<details open>  
 <summary>Communication</summary>
 <div class="detail-content">None</div>
 </details>
 
-<details>
+<details open>  
 <summary>Tracking</summary>
 <div class="detail-content">None</div>
 </details>
 
-<details>
+<details open>  
 <summary>Social</summary>
 <div class="detail-content">None</div>
 </details>
 
-<details>
+<details open>  
 <summary>Planning</summary>
 <div class="detail-content">None</div>
 </details>
 
-<details>
+<details open>  
 <summary>Integrations</summary>
 <div class="detail-content">None</div>
 </details>
 
-<details>
+<details open>  
 <summary>Accessibility</summary>
 <div class="detail-content">Unknown</div>
 </details>
