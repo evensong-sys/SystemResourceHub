@@ -7,14 +7,13 @@ const ToolGrid: QuartzComponent = (props: QuartzComponentProps) => {
       f.slug !== "tools/index"
   )
 
-  // ✅ normalize type → always array of clean strings
+  // normalize types
   const getTypes = (t: any): string[] => {
     if (!t) return []
     const arr = Array.isArray(t) ? t : [t]
     return arr.map((x) => String(x).trim())
   }
 
-  // ✅ build unique type list (ONLY from frontmatter.type)
   const types = Array.from(
     new Set(
       tools.flatMap((t) => getTypes(t.frontmatter?.type))
@@ -22,7 +21,7 @@ const ToolGrid: QuartzComponent = (props: QuartzComponentProps) => {
   )
 
   return (
-    <div>
+    <div className="tool-root">
       {/* SEARCH */}
       <input
         type="text"
@@ -30,7 +29,7 @@ const ToolGrid: QuartzComponent = (props: QuartzComponentProps) => {
         className="tool-search"
       />
 
-      {/* TYPE FILTER */}
+      {/* FILTERS */}
       <div className="tool-filters">
         <button data-type="all" className="active">All</button>
         {types.map((type) => (
@@ -51,7 +50,6 @@ const ToolGrid: QuartzComponent = (props: QuartzComponentProps) => {
               href={`/${tool.slug}`}
               className="tool-card"
               data-type={toolTypes.join(",")}
-              data-tags={(tool.frontmatter?.tags || []).join(",")}
             >
               <div className="tool-card-header">
                 {tool.frontmatter?.logo && (
@@ -61,89 +59,105 @@ const ToolGrid: QuartzComponent = (props: QuartzComponentProps) => {
               </div>
 
               <p>{tool.frontmatter?.description}</p>
-
             </a>
           )
         })}
       </div>
 
-      {/* EMPTY STATE */}
-      <p className="tool-empty">No tools match your filters.</p>
+      {/* EMPTY */}
+      <p className="tool-empty" style={{ display: "none" }}>
+        No tools match your filters.
+      </p>
 
       {/* SCRIPT */}
       <script
         dangerouslySetInnerHTML={{
           __html: `
 (function () {
-  const search = document.querySelector(".tool-search");
-  const typeButtons = document.querySelectorAll(".tool-filters [data-type]");
-  const cards = document.querySelectorAll(".tool-card");
-  const empty = document.querySelector(".tool-empty");
+  function initToolGrid() {
+    document.querySelectorAll(".tool-root").forEach((root) => {
+      if (root.dataset.initialized === "true") return
+      root.dataset.initialized = "true"
 
-  let activeTypes = new Set(["all"]);
+      const search = root.querySelector(".tool-search")
+      const buttons = root.querySelectorAll(".tool-filters [data-type]")
+      const cards = root.querySelectorAll(".tool-card")
+      const empty = root.querySelector(".tool-empty")
 
-  function update() {
-    const query = search.value.toLowerCase();
-    let visible = 0;
+      let activeTypes = new Set(["all"])
 
-    cards.forEach(card => {
-      const title = card.querySelector("h3").innerText.toLowerCase();
-      const desc = card.querySelector("p").innerText.toLowerCase();
-      const typeAttr = card.getAttribute("data-type") || "";
-      const cardTypes = typeAttr.split(",").map(t => t.trim());
+      function update() {
+        const query = (search?.value || "").toLowerCase()
+        let visible = 0
 
-      const matchesSearch =
-        title.includes(query) || desc.includes(query);
+        cards.forEach((card) => {
+          const title = card.querySelector("h3")?.innerText.toLowerCase() || ""
+          const desc = card.querySelector("p")?.innerText.toLowerCase() || ""
+          const typeAttr = card.getAttribute("data-type") || ""
+          const cardTypes = typeAttr.split(",").map(t => t.trim())
 
-      const matchesType =
-        activeTypes.has("all") ||
-        Array.from(activeTypes).every(t => cardTypes.includes(t));
+          const matchesSearch =
+            title.includes(query) || desc.includes(query)
 
-      if (matchesSearch && matchesType) {
-        card.classList.remove("hidden");
-        visible++;
-      } else {
-        card.classList.add("hidden");
+          const matchesType =
+            activeTypes.has("all") ||
+            Array.from(activeTypes).every(t => cardTypes.includes(t))
+
+          if (matchesSearch && matchesType) {
+            card.classList.remove("hidden")
+            visible++
+          } else {
+            card.classList.add("hidden")
+          }
+        })
+
+        if (empty) {
+          empty.style.display = visible === 0 ? "block" : "none"
+        }
       }
-    });
 
-    empty.style.display = visible === 0 ? "block" : "none";
+      search?.addEventListener("input", update)
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const type = btn.getAttribute("data-type")
+
+          if (type === "all") {
+            activeTypes = new Set(["all"])
+            buttons.forEach(b => b.classList.remove("active"))
+            btn.classList.add("active")
+          } else {
+            activeTypes.delete("all")
+            const allBtn = root.querySelector('[data-type="all"]')
+            if (allBtn) allBtn.classList.remove("active")
+
+            if (activeTypes.has(type)) {
+              activeTypes.delete(type)
+              btn.classList.remove("active")
+            } else {
+              activeTypes.add(type)
+              btn.classList.add("active")
+            }
+
+            if (activeTypes.size === 0) {
+              activeTypes.add("all")
+              if (allBtn) allBtn.classList.add("active")
+            }
+          }
+
+          update()
+        })
+      })
+
+      update()
+    })
   }
 
-  search.addEventListener("input", update);
+  // initial load
+  document.addEventListener("DOMContentLoaded", initToolGrid)
 
-  typeButtons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const type = btn.getAttribute("data-type");
-
-      if (type === "all") {
-        activeTypes = new Set(["all"]);
-        typeButtons.forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-      } else {
-        activeTypes.delete("all");
-        const allBtn = document.querySelector('.tool-filters [data-type="all"]');
-        if (allBtn) allBtn.classList.remove("active");
-
-        if (activeTypes.has(type)) {
-          activeTypes.delete(type);
-          btn.classList.remove("active");
-        } else {
-          activeTypes.add(type);
-          btn.classList.add("active");
-        }
-
-        if (activeTypes.size === 0) {
-          activeTypes.add("all");
-          if (allBtn) allBtn.classList.add("active");
-        }
-      }
-
-      update();
-    });
-  });
-
-  update();
+  // Quartz navigation (CRITICAL)
+  document.addEventListener("nav", initToolGrid)
 })();
           `,
         }}

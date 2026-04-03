@@ -5,6 +5,7 @@ import SidebarHeader from "./quartz/components/SidebarHeader"
 import ToolGrid from "./quartz/components/ToolGrid"
 import { RecentNotes } from "./quartz/components/RecentNotes"
 import RecentToolCards from "./quartz/components/RecentToolCards"
+import ToolReviews from "./quartz/components/ToolReviews"
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
@@ -40,9 +41,18 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   right: [ToolSidebar],
   
-    afterBody: [
-	  RecentToolCards(),
-	],
+  afterBody: [
+    RecentToolCards(),
+
+    (props) => {
+      console.log("SLUG:", props.fileData.slug)
+
+      if (props.fileData.slug?.startsWith("tools/") && props.fileData.slug !== "tools/index") {
+        return ToolReviews(props)
+      }
+      return null
+    },
+  ],
 }
 
 // LIST PAGE LAYOUT (THIS is your tools page)

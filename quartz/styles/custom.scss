@@ -5,19 +5,20 @@
 /// =========================
 
 img {
-max-width: 100%;
-height: auto;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /// ---------- INLINE ICONS ----------
 
 .inline-icon {
-display: inline-block;
-vertical-align: -2px;
-margin-right: 6px;
-width: 16px;
-height: 16px;
-object-fit: contain;
+  display: inline-block;
+  vertical-align: -2px;
+  margin-right: 6px;
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
 }
 
 /// =========================
@@ -25,20 +26,21 @@ object-fit: contain;
 /// =========================
 
 .sidebar-header {
-display: flex;
-align-items: center;
-gap: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
 }
 
 .sidebar-logo img {
-width: 36px;
-height: 36px;
-object-fit: contain;
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .sidebar-title h1 {
-font-size: 1.1rem;
-margin: 0;
+  font-size: 1.1rem;
+  margin: 0;
 }
 
 /// =========================
@@ -46,125 +48,133 @@ margin: 0;
 /// =========================
 
 .tool-header {
-display: flex;
-gap: 16px;
-align-items: flex-start;
-margin-bottom: 18px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 18px;
 }
 
 .tool-header img {
-width: 56px;
-height: 56px;
-border-radius: 10px;
-object-fit: cover;
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  object-fit: contain; // ✅ FIXED (was cover = broken icons)
+  flex-shrink: 0;      // ✅ prevents squishing
 }
 
 .tool-desc {
-margin: 4px 0 10px;
-font-size: 0.95rem;
-color: var(--darkgray);
-max-width: 600px;
+  margin: 4px 0 10px;
+  font-size: 0.95rem;
+  color: var(--darkgray);
+  max-width: 600px;
 }
 
 /// ---------- TOOL PREVIEW ----------
 
 .tool-preview {
-max-width: 280px;
-width: 100%;
-margin: 0 auto;
-display: block;
+  max-width: 280px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
 
-padding: 12px;
-background: #111;
-border-radius: 16px;
+  padding: 12px;
+  background: #111;
+  border-radius: 16px;
+}
+
+.tool-preview img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; // ✅ prevents distortion inside preview
 }
 
 /// ---------- META ----------
 
 .tool-meta {
-display: grid;
-grid-template-columns: repeat(2, minmax(180px, 1fr));
-gap: 6px 20px;
-margin-bottom: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 6px 20px;
+  margin-bottom: 24px;
 }
 
 .meta-pair {
-display: grid;
-grid-template-columns: auto 1fr;
-gap: 6px;
-font-size: 0.9rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px;
+  font-size: 0.9rem;
 }
 
 .meta-label {
-font-weight: 600;
-color: var(--secondary);
+  font-weight: 600;
+  color: var(--secondary);
 }
 
 .meta-value {
-color: var(--darkgray);
+  color: var(--darkgray);
 }
 
 /// ---------- CONTENT ----------
 
 .tool-container {
-display: flex;
-flex-direction: column;
-gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .tool-section {
-margin-top: 24px;
+  margin-top: 24px;
 }
 
 .tool-section h2 {
-font-size: 1.1rem;
-color: var(--secondary);
+  font-size: 1.1rem;
+  color: var(--secondary);
+  margin-bottom: 6px; // ✅ restores spacing rhythm
 }
 
 /// ---------- FEATURES ----------
 
 .feature-section details {
-border-bottom: 1px solid var(--gray);
-padding: 8px 0;
+  border-bottom: 1px solid var(--gray);
+  padding: 8px 0;
 }
 
 .feature-section summary {
-display: flex;
-justify-content: space-between;
-cursor: pointer;
-font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  font-weight: 600;
 }
 
 .feature-section summary::after {
-content: "▸";
-transition: transform 0.2s ease;
+  content: "▸";
+  transition: transform 0.2s ease;
 }
 
 .feature-section details[open] summary::after {
-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .detail-content {
-padding-left: 12px;
-font-size: 0.9em;
-color: var(--darkgray);
+  padding-left: 12px;
+  font-size: 0.9em;
+  color: var(--darkgray);
 }
 
 /// ---------- RIGHT SIDEBAR ----------
 
 .tool-sidebar {
-position: sticky;
-top: 80px;
-display: flex;
-flex-direction: column;
-gap: 20px;
+  position: sticky;
+  top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .tool-links {
-display: flex;
-gap: 12px;
-flex-wrap: wrap;
-align-items: center;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .tool-links a {
@@ -178,16 +188,19 @@ align-items: center;
   color: var(--tertiary);
   transform: translateY(-1px);
 }
+
 /// =========================
-/// TOOLS INDEX PAGE
+/// TOOLS INDEX PAGE (RESTORED WORKING STATE)
 /// =========================
 
-body[data-slug="tools/index"] main {
-  max-width: 1100px;
-}
-
+/* ✅ Quartz must exist BUT not be visible */
 body[data-slug="tools/index"] .page-listing {
-  display: none;
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 /// ---------- SEARCH ----------
@@ -205,6 +218,7 @@ body[data-slug="tools/index"] .tool-filters {
   display: flex;
   gap: 0.5rem;
   margin-bottom: 1rem;
+  flex-wrap: wrap;
 }
 
 body[data-slug="tools/index"] .tool-filters button {
@@ -215,20 +229,13 @@ body[data-slug="tools/index"] .tool-filters button {
   cursor: pointer;
 }
 
-/* ✅ ADDED: ACTIVE FILTER STATE */
 body[data-slug="tools/index"] .tool-filters button.active {
   background: var(--secondary);
   color: white;
   border-color: var(--secondary);
 }
 
-/// ---------- HIDDEN STATE (FIXED, DO NOT BREAK AGAIN ) ----------
-
-body[data-slug="tools/index"] .tool-card.hidden {
-  display: none;
-}
-
-/// ---------- GRID ----------
+/// ---------- GRID (YOUR UI) ----------
 
 body[data-slug="tools/index"] .tool-grid {
   display: grid;
@@ -254,8 +261,6 @@ body[data-slug="tools/index"] .tool-card:hover {
   box-shadow: 0 6px 14px rgba(0,0,0,0.08);
 }
 
-/// ---------- CARD HEADER ----------
-
 body[data-slug="tools/index"] .tool-card-header {
   display: flex;
   align-items: center;
@@ -267,16 +272,196 @@ body[data-slug="tools/index"] .tool-card-header img {
   height: 26px;
   border-radius: 6px;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
-body[data-slug="tools/index"] .tool-card h3 {
-  margin: 0;
+/// ---------- 🔥 CRITICAL: MATCH QUARTZ HIDING ----------
+
+body[data-slug="tools/index"] .tool-card.hidden,
+body[data-slug="tools/index"] .tool-card[hidden],
+body[data-slug="tools/index"] .tool-card[data-hidden="true"] {
+  display: none !important;
+}
+
+/// =========================
+/// REVIEWS (MATCH TOOL SYSTEM)
+/// =========================
+
+.tool-reviews {
+  margin-top: 24px;
+}
+
+/* Title matches your h2 rhythm */
+.reviews-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Summary aligns with your spacing system */
+.reviews-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6px 0 12px;
+}
+
+.avg-stars {
+  letter-spacing: 2px;
   font-size: 0.95rem;
 }
 
-body[data-slug="tools/index"] .tool-card p {
-  font-size: 0.82rem;
-  color: #444;
+/* Filters use your tag/button language */
+.review-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.review-filters span {
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(120,120,160,0.25);
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+
+.review-filters span:hover {
+  border-color: var(--secondary);
+}
+
+.review-filters span.active {
+  background: var(--secondary);
+  color: white;
+  border-color: var(--secondary);
+}
+
+/* Review cards = same visual language as tool cards but lighter */
+.review-card {
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: 1px solid rgba(140,140,180,0.25);
+  background: rgba(255,255,255,0.02);
+  margin-bottom: 10px;
+}
+
+.review-text {
+  margin: 6px 0;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.review-author {
+  font-size: 0.75rem;
+  color: var(--darkgray);
+}
+
+/* ---------- SUBMIT FORM ---------- */
+
+.review-submit {
+  margin-top: 18px;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(140,140,180,0.25);
+  background: rgba(255,255,255,0.02);
+}
+
+.review-submit h3 {
+  margin-bottom: 8px;
+}
+
+/* Inputs follow your search/filter styling */
+.review-submit input,
+.review-submit select,
+.review-submit textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid rgba(120,120,160,0.25);
+  background: transparent;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+.review-submit textarea {
+  min-height: 70px;
+  resize: vertical;
+}
+
+/* Button matches your filter buttons */
+.review-submit-btn {
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(120,120,160,0.25);
+  background: #f3f3ff;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: 0.15s ease;
+}
+
+.review-submit-btn:hover {
+  background: var(--secondary);
+  color: white;
+  border-color: var(--secondary);
+}
+
+/* Status text */
+.review-status {
+  font-size: 0.75rem;
+  color: var(--darkgray);
+  margin-top: 6px;
+}
+
+/* ---------- TAG PICKER (FIXES YOUR BIG ISSUE CLEANLY) ---------- */
+
+.tag-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.tag-picker span {
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(120,120,160,0.25);
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+
+.tag-picker span:hover {
+  border-color: var(--secondary);
+}
+
+.tag-picker span.active {
+  background: var(--secondary);
+  color: white;
+  border-color: var(--secondary);
+}
+
+/* ---------- ACTION BUTTONS ---------- */
+
+.review-actions {
+  margin-top: 6px;
+  display: flex;
+  gap: 6px;
+}
+
+.review-actions button {
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 6px;
+  border: 1px solid rgba(120,120,160,0.25);
+  background: transparent;
+  cursor: pointer;
+}
+
+.review-actions button:hover {
+  border-color: var(--secondary);
+  color: var(--secondary);
 }
 
 /// =========================
@@ -284,106 +469,75 @@ body[data-slug="tools/index"] .tool-card p {
 /// =========================
 
 .recent-tools {
-margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 .recent-tools .tool-grid {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
 }
 
-/// ---------- CARD ----------
-
 .recent-tools .tool-card {
-display: flex;
-align-items: center;
-gap: 1rem;
-padding: 1rem;
-border-radius: 16px;
-background: var(--light);
-text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 16px;
+  background: var(--light);
+  text-decoration: none;
 }
 
 .recent-tools .tool-card img {
-width: 40px;
-height: 40px;
-object-fit: contain;
-}
-
-.recent-tools .tool-card p {
-display: -webkit-box;
--webkit-line-clamp: 5;
--webkit-box-orient: vertical;
-overflow: hidden;
-text-overflow: ellipsis;
-max-height: calc(1.2em * 5);
-}
-
-/// ---------- HOVER ----------
-
-.tool-card:hover {
-transform: translateY(-2px);
-box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 /// =========================
-/// GLOBAL TEXT
-/// =========================
-
-p {
-line-height: 1.6;
-margin-bottom: 1rem;
-}
-
-h2 {
-margin-top: 2.5rem;
-}
-
-/// =========================
-/// TABLES (FIXED)
+/// TABLES (SAFE)
 /// =========================
 
 .sp-table-wrap {
-overflow-x: auto;
+  overflow-x: auto;
 }
 
 .sp-table {
-width: 100%;
-min-width: 600px;
-border-collapse: collapse;
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
 }
 
 .sp-table th,
 .sp-table td {
-padding: 0.5rem;
-border-bottom: 1px solid var(--border);
-vertical-align: middle;
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
 }
 
-/// ---------- APP CELL ----------
-
 .app-cell {
-display: flex;
-align-items: center;
-gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .app-cell img {
-width: 40px;
-height: 40px;
-object-fit: contain;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .app-text {
-display: flex;
-flex-direction: column;
-line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
 }
 
 .app-sub {
-font-size: 0.8rem;
-color: var(--darkgray);
+  font-size: 0.8rem;
+  color: var(--darkgray);
 }
 
 /// =========================
@@ -391,22 +545,10 @@ color: var(--darkgray);
 /// =========================
 
 .tally-wrapper iframe {
-width: 100%;
-min-height: 900px;
-border: none;
-display: block;
-}
-
-
-/// =========================
-/// FONTAWESOME ICONS
-/// =========================
-
-.inline-icon {
-  margin-right: 6px;
-  width: 1.2em;
-  text-align: center;
-  color: var(--secondary);
+  width: 100%;
+  min-height: 900px;
+  border: none;
+  display: block;
 }
 
 /// =========================

@@ -1,6 +1,6 @@
 ---
 created: 2026/04/01
-modified: 2026/04/01
+modified: 2026/04/02
 title: PluralLog
 logo: https://file.garden/ablfJEO_5VmXicbZ/SRH%20assets/plurallog.png
 seoTitle: PluralLog - Front Tracking & System Logging Tool | System Resource Hub
@@ -32,8 +32,8 @@ links:
 tags:
   - energy-low
   - platform/mobile
-  - type/journaling
   - type/front-tracking
+  - type/journaling
 ---
 
 <div class="tool-header">  

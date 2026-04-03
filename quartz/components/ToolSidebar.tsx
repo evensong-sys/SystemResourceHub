@@ -17,6 +17,17 @@ const ToolSidebar: QuartzComponentConstructor = ({ fileData }) => {
     ? marked.parse(fm.description)
     : ""
 
+  // ✅ NEW — feedback links (SAFE)
+  const toolName = fm.title ?? "this tool"
+
+  const reportLink = `https://tally.so/r/YOURFORM?tool=${encodeURIComponent(
+    toolName
+  )}`
+
+  const githubLink = `https://github.com/YOUR_REPO/issues/new?title=${encodeURIComponent(
+    `Issue with ${toolName}`
+  )}`
+
   return (
     <aside className="tool-sidebar">
 
@@ -174,6 +185,23 @@ const ToolSidebar: QuartzComponentConstructor = ({ fileData }) => {
           </p>
         </div>
       )}
+
+      {/* ✅ NEW — FEEDBACK (MATCHES YOUR STRUCTURE) */}
+      <div className="tool-section">
+        <p style={{ marginBottom: "0.25rem" }}>
+          Found an error or outdated info?
+        </p>
+
+        <p>
+          <a href={reportLink} target="_blank" rel="noopener noreferrer">
+            Report issue
+          </a>{" "}
+          ·{" "}
+          <a href={githubLink} target="_blank" rel="noopener noreferrer">
+            Suggest edit
+          </a>
+        </p>
+      </div>
 
     </aside>
   )
