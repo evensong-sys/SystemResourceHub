@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>System Resource Hub</title>
+      <link>https://evensong-sys.github.io/SystemResourceHub</link>
+      <description>Last 10 notes on System Resource Hub</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>PluralLog</title>
+    <link>https://evensong-sys.github.io/SystemResourceHub/tools/plurallog</link>
+    <guid>https://evensong-sys.github.io/SystemResourceHub/tools/plurallog</guid>
+    <description><![CDATA[ PluralLog is a system logging tool designed for tracking fronting, switches, and internal activity over time, helping plural systems keep structured records of their experiences. ]]></description>
+    <pubDate>Thu, 02 Apr 2026 04:00:00 GMT</pubDate>
+  </item><item>
+    <title>Ampersand</title>
+    <link>https://evensong-sys.github.io/SystemResourceHub/tools/ampersand</link>
+    <guid>https://evensong-sys.github.io/SystemResourceHub/tools/ampersand</guid>
+    <description><![CDATA[ Ampersand is a plural system management tool for tracking members, fronting, and system information, with a focus on simplicity and ease of use. This app is offline-by-design and privacy focused. ]]></description>
+    <pubDate>Wed, 01 Apr 2026 04:00:00 GMT</pubDate>
+  </item><item>
+    <title>Antar</title>
+    <link>https://evensong-sys.github.io/SystemResourceHub/tools/antar</link>
+    <guid>https://evensong-sys.github.io/SystemResourceHub/tools/antar</guid>
+    <description><![CDATA[ Antar is an internal chat app designed for self-dialogue, often used by plural systems to communicate between headmates, leave messages, and organize internal conversations. ]]></description>
+    <pubDate>Wed, 01 Apr 2026 04:00:00 GMT</pubDate>
+  </item><item>
+    <title>FileGarden</title>
+    <link>https://evensong-sys.github.io/SystemResourceHub/tools/filegarden</link>
+    <guid>https://evensong-sys.github.io/SystemResourceHub/tools/filegarden</guid>
+    <description><![CDATA[ FileGarden is a simple file hosting service for uploading and sharing images and other assets via direct links, commonly used for profiles, system tools, and websites. ]]></description>
+    <pubDate>Wed, 01 Apr 2026 04:00:00 GMT</pubDate>
+  </item><item>
+    <title>Hivemind</title>
+    <link>https://evensong-sys.github.io/SystemResourceHub/tools/hivemind</link>
+    <guid>https://evensong-sys.github.io/SystemResourceHub/tools/hivemind</guid>
+    <description><![CDATA[ Hivemind is a plural system management tool designed for tracking members, fronting, and system activity. It provides a centralized space for systems to organize information, log switches, and keep track of internal dynamics. ]]></description>
+    <pubDate>Wed, 01 Apr 2026 04:00:00 GMT</pubDate>
+  </item><item>
+    <title>Lighthouse</title>
+    <link>https://evensong-sys.github.io/SystemResourceHub/tools/lighthouse</link>
+    <guid>https://evensong-sys.github.io/SystemResourceHub/tools/lighthouse</guid>
+    <description><![CDATA[ Lighthouse is an internal communication app designed for plural systems to leave messages, share updates, and communicate across time and headmates. ]]></description>
+    <pubDate>Wed, 01 Apr 2026 04:00:00 GMT</pubDate>
+  </item><item>
+    <title>Ourcana</title>
+    <link>https://evensong-sys.github.io/SystemResourceHub/tools/ourcana</link>
+    <guid>https://evensong-sys.github.io/SystemResourceHub/tools/ourcana</guid>
+    <description><![CDATA[ Ourcana is a system management and profile tool that allows plural systems to create public or private profiles for members, track fronting, and organize system information. ]]></description>
+    <pubDate>Wed, 01 Apr 2026 04:00:00 GMT</pubDate>
+  </item><item>
+    <title>PluralKit</title>
+    <link>https://evensong-sys.github.io/SystemResourceHub/tools/pluralkit</link>
+    <guid>https://evensong-sys.github.io/SystemResourceHub/tools/pluralkit</guid>
+    <description><![CDATA[ PluralKit is a Discord bot that allows plural systems to proxy messages as different members, track fronting, and manage system information. It is widely used by DID/OSDD systems and other plural users to communicate more clearly on Discord while maintaining distinct identities for each member. ]]></description>
+    <pubDate>Wed, 01 Apr 2026 04:00:00 GMT</pubDate>
+  </item><item>
+    <title>PluralSync</title>
+    <link>https://evensong-sys.github.io/SystemResourceHub/tools/pluralsync</link>
+    <guid>https://evensong-sys.github.io/SystemResourceHub/tools/pluralsync</guid>
+    <description><![CDATA[ PluralSync is a cloud service where users can automatically sync their plural systems' fronting status between various system managers and social platforms such as SimplyPlural, PluralKit, VRChat, Discord,  or their own website. ]]></description>
+    <pubDate>Wed, 01 Apr 2026 04:00:00 GMT</pubDate>
+  </item><item>
+    <title>ScratchFront</title>
+    <link>https://evensong-sys.github.io/SystemResourceHub/tools/scratchfront</link>
+    <guid>https://evensong-sys.github.io/SystemResourceHub/tools/scratchfront</guid>
+    <description><![CDATA[ ScratchFront is a lightweight tool for displaying front status. This tool is part of [ScratchUpload](/tools/scratchupload). and uses your uploaded images for member avatars. ]]></description>
+    <pubDate>Wed, 01 Apr 2026 04:00:00 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>
